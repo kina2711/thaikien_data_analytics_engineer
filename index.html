@@ -22,9 +22,12 @@
     .exp2col > *:last-child { width: 100% !important; height: 160px !important; }
   }
   @media (max-width: 600px) {
-    nav { padding: 12px 16px !important; }
+    nav { padding: 12px 16px !important; flex-direction: column; align-items: flex-start !important; gap: 10px !important; }
+    nav > div { gap: 12px 16px !important; align-items: center; }
     header, section, footer > div { padding-left: 16px !important; padding-right: 16px !important; }
     .cs2col > div:first-child, .exp2col { padding: 22px !important; }
+    #contact a { flex: 1 1 100%; text-align: center; }
+    .hero-contact { text-wrap: balance; line-height: 1.7 !important; }
   }
 </style>
 </helmet>
@@ -32,7 +35,7 @@
 
   <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 24px; background: rgba(11,12,16,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #23262F;">
     <a href="#top" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #EEF0F4; letter-spacing: 0.02em;">kien<span style="color: #F5B02E;">.</span>thai</a>
-    <div style="display: flex; gap: 22px; font-size: 13.5px; flex-wrap: wrap;">
+    <div style="display: flex; gap: 22px; font-size: 13.5px; flex-wrap: wrap; align-items: center;">
       <a href="#about" style="color: #99A1AF;" style-hover="color: #F5B02E;">About</a>
       <a href="#experience" style="color: #99A1AF;" style-hover="color: #F5B02E;">Experience</a>
       <a href="#case-studies" style="color: #99A1AF;" style-hover="color: #F5B02E;">Case Studies</a>
@@ -58,7 +61,7 @@
       <a href="https://www.linkedin.com/in/trungkienthai2711/" title="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; border: 1px solid #363B47; background: #12141A; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; color: #4B8DF8;" style-hover="border-color: #4B8DF8; color: #4B8DF8;">in</a>
       <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kienthai2711@gmail.com" title="Email kienthai2711@gmail.com" style="display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; border: 1px solid #363B47; background: #12141A;" style-hover="border-color: #F5B02E;"><img src="assets/skills/gmail.svg" alt="Email" style="width: 20px; height: 20px;"></a>
     </div>
-    <p style="font-size: 13.5px; color: #6E7686; margin: 18px 0 0 0; font-family: 'IBM Plex Mono', monospace;">kienthai2711@gmail.com &#183; +84 945 613 721 &#183; HCM City / Hanoi, Vietnam</p>
+    <p class="hero-contact" style="font-size: 13.5px; color: #6E7686; margin: 18px 0 0 0; font-family: 'IBM Plex Mono', monospace;">kienthai2711@gmail.com &#183; +84 945 613 721<br>HCM City &#183; Hanoi, Vietnam</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden; margin-top: 58px; width: 100%; text-align: left;">
       <div style="background: #12141A; padding: 22px 20px;">
         <p style="font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; margin: 0; color: #F5B02E;">843M+</p>
@@ -719,31 +722,36 @@
     <div class="about2col" style="display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 40px; align-items: start;">
       <div>
         <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 42px); margin: 0 0 20px 0; letter-spacing: -0.01em;">From pharmacy to pipelines</h2>
-        <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; margin: 0 0 16px 0;">I studied pharmacy at Hanoi University of Pharmacy — and from my first year, I worked. Sales, medical rep, marketing, medical affairs: I tried nearly every role the industry offered, hoping each one would be "the one". I could do the work, but I never caught myself opening the laptop after hours just out of curiosity. That, I realized, was the real test.</p>
-        <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; margin: 0 0 16px 0;">The turn came in medical affairs. A mentor pointed at a chart in a paper and asked: <span style="color: #EEF0F4; font-style: italic;">"Work out how they computed this."</span> I spent days re-reading the methodology, re-deriving every number — and loved it. Not solving the puzzle, but watching scattered numbers become logic. Later, marketing showed me the business side: campaigns that looked loud but didn't convert, quiet ones that did. Data didn't make the decisions — it made them less emotional.</p>
-        <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; margin: 0 0 16px 0;">So I learned, one real problem at a time: <span style="color: #EEF0F4; font-weight: 600;">Python</span> when Excel stopped scaling, <span style="color: #EEF0F4; font-weight: 600;">SQL</span> when I got tired of waiting for someone else to pull data, <span style="color: #EEF0F4; font-weight: 600;">Power BI</span> when analyses needed an audience — then <span style="color: #EEF0F4; font-weight: 600;">dbt, warehousing and modeling</span> when I noticed the hard part was never the dashboard, but everything underneath it. I've never learned a tool because it was hot; only because a problem demanded it.</p>
-        <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; margin: 0 0 16px 0;">Today, as an analytics engineer, my job in one sentence: <span style="color: #EEF0F4; font-weight: 600;">help the business trust its data before using it to decide.</span> That means sitting with teams to agree on what a "new customer" even is, then encoding that agreement into models, tests and a semantic layer — so meetings stop debating whose report is right and start debating what to do next.</p>
-        <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; margin: 0 0 16px 0;">Pharmacy didn't teach me SQL. It taught me to ask how a number was made before accepting it, and that one wrong assumption changes every conclusion downstream. I no longer call what I did a career switch — I carried one field's discipline into another field's problems.</p>
+        <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; margin: 0 0 16px 0;">I trained in pharmacy at Hanoi University of Pharmacy and worked through nearly every role the industry offered — sales, medical rep, marketing, medical affairs. I could do the work, but nothing pulled me back to the laptop after hours. The turn came in medical affairs, when a mentor pointed at a chart in a research paper and asked: <span style="color: #EEF0F4; font-style: italic;">"Work out how they computed this."</span> I spent days re-deriving every number — and realized what hooked me wasn't pharma, it was <span style="color: #EEF0F4; font-weight: 600;">the mechanism behind a number</span>.</p>
+        <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; margin: 0 0 16px 0;">So I moved into data — one real problem at a time: <span style="color: #EEF0F4; font-weight: 600;">Python</span> when Excel stopped scaling, <span style="color: #EEF0F4; font-weight: 600;">SQL</span> when I got tired of waiting for extracts, <span style="color: #EEF0F4; font-weight: 600;">Power BI</span> when analyses needed an audience, then <span style="color: #EEF0F4; font-weight: 600;">dbt, warehousing and pipelines</span> when I saw the hard part was never the dashboard but everything underneath it. Never a tool because it was hot — only because a problem demanded it.</p>
+        <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; margin: 0 0 16px 0;">Today, as an analytics engineer, my job in one sentence: <span style="color: #EEF0F4; font-weight: 600;">help the business trust its data before using it to decide.</span> Pharmacy's discipline carried over intact — ask how a number was made before accepting it, because one wrong assumption changes every conclusion downstream.</p>
+        <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px 20px; margin: 0 0 16px 0; overflow-x: auto;">
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; letter-spacing: 0.12em; margin: 0 0 12px 0;">SKILL DEPTH ACROSS THE JOURNEY &#183; PHARMACY &#8594; DATA ANALYST &#8594; ANALYTICS ENGINEER</p>
+          <div style="min-width: 380px;">
+            <div style="display: grid; grid-template-columns: 130px repeat(4, 1fr); gap: 4px; align-items: center; margin-bottom: 4px;">
+              <span></span>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6E7686; margin: 0; text-align: center;">PHARMA</p>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6E7686; margin: 0; text-align: center;">MARKETING</p>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6E7686; margin: 0; text-align: center;">DATA ANALYST</p>
+              <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #F5B02E; margin: 0; text-align: center;">AE (NOW)</p>
+            </div>
+            <sc-for list="{{ journeyRows }}" as="row" hint-placeholder-count="6">
+              <div style="display: grid; grid-template-columns: 130px repeat(4, 1fr); gap: 4px; align-items: center; margin-bottom: 4px;">
+                <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #99A1AF; margin: 0;">{{ row.skill }}</p>
+                <sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="4">
+                  <div style="{{ c.style }}" title="{{ c.label }}"></div>
+                </sc-for>
+              </div>
+            </sc-for>
+            <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #4A515F; margin: 10px 0 0 0;">brighter = deeper practice at that stage</p>
+          </div>
+        </div>
         <blockquote style="margin: 24px 0 0 0; padding: 16px 20px; border-left: 3px solid #F5B02E; background: #12141A; border-radius: 0 10px 10px 0;">
           <p style="font-size: 16.5px; line-height: 1.65; color: #EEF0F4; margin: 0; font-style: italic;">"Don't just learn how to find the answer — learn to understand why that answer exists."</p>
         </blockquote>
         <p style="font-size: 15px; line-height: 1.75; color: #99A1AF; margin: 16px 0 0 0;">Outside work I help run <span style="color: #EEF0F4; font-weight: 600;">X&#243;m Data</span>, Vietnam's data community of 100,000+ members, and teach — because explaining something is the fastest way to find out what you don't actually understand yet.</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 24px;">
-          <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;">
-            <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #F5B02E; margin: 0 0 6px 0;">DOMAIN EXPERTISE</p>
-            <p style="font-size: 13.5px; color: #99A1AF; line-height: 1.6; margin: 0;">Healthcare, Pharma, Marketing and Retail — from hospital data to omnichannel commerce.</p>
-          </div>
-          <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;">
-            <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #F2712B; margin: 0 0 6px 0;">TECHNICAL STRENGTH</p>
-            <p style="font-size: 13.5px; color: #99A1AF; line-height: 1.6; margin: 0;">Full loop: ingestion &#8594; storage &#8594; modeling &#8594; testing &#8594; semantic layer &#8594; dashboards.</p>
-          </div>
-          <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;">
-            <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4B8DF8; margin: 0 0 6px 0;">2026</p>
-            <p style="font-size: 13.5px; color: #99A1AF; line-height: 1.6; margin: 0;">Ready for new challenges as a Middle Analytics Engineer.</p>
-          </div>
-        </div>
       </div>
-      <div style="display: grid; gap: 12px;">
+      <div style="display: grid; gap: 12px; align-content: start;">
         <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;">
           <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 6px 0;">CURRENTLY</p>
           <p style="font-size: 14.5px; margin: 0; line-height: 1.6;">Data Analytics Engineer @ VMT Holdings — CDC streaming + dbt warehouse serving ~900 users</p>
@@ -755,6 +763,18 @@
         <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;">
           <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 6px 0;">CERTIFICATIONS</p>
           <p style="font-size: 14.5px; margin: 0; line-height: 1.6;">Google Data Analytics, Advanced DA &amp; BI Certificates; HackerRank SQL (Advanced)</p>
+        </div>
+        <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;">
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #F5B02E; margin: 0 0 6px 0;">DOMAIN EXPERTISE</p>
+          <p style="font-size: 14.5px; margin: 0; line-height: 1.6;">Healthcare, Pharma, Marketing and Retail — from hospital data to omnichannel commerce</p>
+        </div>
+        <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;">
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #F2712B; margin: 0 0 6px 0;">TECHNICAL STRENGTH</p>
+          <p style="font-size: 14.5px; margin: 0; line-height: 1.6;">Full loop: ingestion &#8594; storage &#8594; modeling &#8594; testing &#8594; semantic layer &#8594; dashboards</p>
+        </div>
+        <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;">
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4B8DF8; margin: 0 0 6px 0;">2026</p>
+          <p style="font-size: 14.5px; margin: 0; line-height: 1.6;">Ready for new challenges as a Middle Analytics Engineer</p>
         </div>
       </div>
     </div>
@@ -831,11 +851,30 @@ class Component extends DCLogic {
     { cat: 'HR & Automation', title: 'HR Analytics: Employee Attrition', desc: 'HR metrics visualization correlating attrition with salary and overtime.', result: 'Sales dept flagged at 30% churn; actionable retention insights.', href: 'https://github.com/kina2711/HR_analytics_project' },
     { cat: 'HR & Automation', title: 'Automated YouTube Metrics AI Agent', desc: 'n8n workflow auto-fetching video metrics with AI performance summaries.', result: 'Saved ~5 hrs/week; fully automated weekly insights.', href: 'https://github.com/kina2711/ai_agent_with_n8n' },
   ];
+  static JOURNEY = [
+    ['Domain rigor', [0.9, 0.7, 0.8, 1]],
+    ['SQL', [0, 0.3, 0.85, 1]],
+    ['Python', [0, 0.35, 0.75, 0.9]],
+    ['BI & storytelling', [0.15, 0.55, 0.95, 0.85]],
+    ['dbt & modeling', [0, 0, 0.35, 1]],
+    ['Pipelines & CDC', [0, 0, 0.2, 0.95]],
+  ];
   renderVals() {
     const { filter, skillTab } = this.state;
+    const journeyRows = Component.JOURNEY.map(([skill, vals]) => ({
+      skill,
+      cells: vals.map((v, i) => ({
+        label: skill + ': ' + Math.round(v * 100) + '%',
+        style: {
+          height: '18px', borderRadius: '4px',
+          background: v === 0 ? '#1B1E27' : (i === 3 ? 'rgba(245,176,46,' + (0.25 + v * 0.75) + ')' : 'rgba(75,141,248,' + (0.15 + v * 0.6) + ')'),
+        },
+      })),
+    }));
     const tabBase = { fontFamily: "'IBM Plex Mono', monospace", fontSize: '12.5px', padding: '7px 14px', borderRadius: '6px', border: '1px solid #2B2F3A', background: 'transparent', color: '#99A1AF', cursor: 'pointer' };
     const tabActive = { ...tabBase, background: '#F5B02E', color: '#0B0C10', border: '1px solid #F5B02E', fontWeight: 700 };
     return {
+      journeyRows,
       filterTabs: Component.CATS.map(c => ({ name: c, style: c === filter ? tabActive : tabBase, pick: () => this.setState({ filter: c }) })),
       projects: Component.PROJECTS.filter(p => filter === 'All' || p.cat === filter),
       skillTabs: ['Domain', 'Technical', 'Soft'].map(t => ({ name: t, style: t === skillTab ? tabActive : tabBase, pick: () => this.setState({ skillTab: t }) })),
