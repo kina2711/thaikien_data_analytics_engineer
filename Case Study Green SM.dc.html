@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0B0C10; }
+  a { color: #F5B02E; text-decoration: none; }
+  a:hover { color: #FFC95C; }
+  ::selection { background: #F5B02E; color: #0B0C10; }
+</style>
+</helmet>
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #EEF0F4; background: #0B0C10; min-height: 100vh;">
+
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 24px; background: rgba(11,12,16,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #23262F;">
+    <a href="Portfolio Home.dc.html" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #EEF0F4;">&#8592; kien<span style="color: #F5B02E;">.</span>thai</a>
+    <div style="display: flex; gap: 20px; font-size: 13px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace;">
+      <a href="#answer" style="color: #99A1AF;" style-hover="color: #F5B02E;">Answer</a>
+      <a href="#problem" style="color: #99A1AF;" style-hover="color: #F5B02E;">Problem</a>
+      <a href="#evidence" style="color: #99A1AF;" style-hover="color: #F5B02E;">Evidence</a>
+      <a href="#decision" style="color: #99A1AF;" style-hover="color: #F5B02E;">Decision</a>
+      <a href="#build" style="color: #99A1AF;" style-hover="color: #F5B02E;">Build</a>
+      <a href="#reflection" style="color: #99A1AF;" style-hover="color: #F5B02E;">Reflection</a>
+    </div>
+  </nav>
+
+  <header data-screen-label="Hero" style="max-width: 1140px; margin: 0 auto; padding: 88px 24px 56px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 18px 0; letter-spacing: 0.12em;">DATA ANALYTICS ENGINEERING / MARKET INTELLIGENCE</p>
+    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(38px, 6vw, 68px); line-height: 1.05; letter-spacing: -0.02em; margin: 0; font-weight: 700;">843.8 million NYC trips.<br><span style="color: #F5B02E;">One narrower decision.</span></h1>
+    <p style="font-size: 18px; line-height: 1.7; color: #99A1AF; max-width: 680px; margin: 24px 0 0 0; text-wrap: pretty;">I built an end-to-end analytics project to test where and when observed trip activity could justify deeper market-entry research for a hypothetical electric ride-hailing service in New York City.</p>
+    <div style="display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap;">
+      <a href="https://kina2711.github.io/green-sm-nyc-mobility-intelligence/" style="background: #F5B02E; color: #0B0C10; font-weight: 700; padding: 13px 24px; border-radius: 8px; font-size: 15px;" style-hover="background: #FFC95C; color: #0B0C10;">Explore live dashboard &#8599;</a>
+      <a href="https://github.com/kina2711/green-sm-nyc-mobility-intelligence" style="border: 1px solid #363B47; color: #EEF0F4; padding: 13px 24px; border-radius: 8px; font-size: 15px; font-weight: 600;" style-hover="border-color: #F5B02E; color: #F5B02E;">View source code</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden; margin-top: 44px;">
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">ROLE</p><p style="font-size: 14px; margin: 0;">Data Analyst + Analytics Engineer</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">SCOPE</p><p style="font-size: 14px; margin: 0;">Individual project</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">DATA</p><p style="font-size: 14px; margin: 0;">NYC TLC, Jan 2023 &#8211; Dec 2025</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">OUTPUT</p><p style="font-size: 14px; margin: 0;">Tested marts + interactive dashboard</p></div>
+    </div>
+    <p style="font-size: 13px; color: #6E7686; margin: 16px 0 0 0; line-height: 1.6;">Personal portfolio study — not affiliated with Green SM or NYC TLC. It analyzes completed-trip activity only; it does not observe requests, driver supply, charging capacity, or unit economics, and never presents completed trips as unmet demand.</p>
+    <a href="https://kina2711.github.io/green-sm-nyc-mobility-intelligence/" style="display: block; margin-top: 36px; border: 1px solid #23262F; border-radius: 14px; overflow: hidden;" style-hover="border-color: #F5B02E;">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="greensm-hero-shot" shape="rect" placeholder="Drop dashboard-overview.png here (16:9 dashboard screenshot)" src="assets/greensm-preview.png" hint-size="100%,420px" style="width: 100%; height: 420px;"></x-import>
+    </a>
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6E7686; margin: 10px 0 0 0; text-align: center;">Interactive decision-support dashboard built from tested dbt marts and six versioned JSON contracts.</p>
+  </header>
+
+  <section id="answer" data-screen-label="The Answer" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">01 / THE ANSWER</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 18px 0; letter-spacing: -0.01em; max-width: 760px; text-wrap: balance;">The data supports a focused validation phase, not a citywide launch.</h2>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 12px 0;">NYC trip activity grew across the analysis window, but growth sits inside a market dominated by two platforms. Activity is dense in Manhattan, while several Queens zones combine growth, fare, and airport relevance. Friday and Saturday evenings show the clearest recurring operating window.</p>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 28px 0;">My recommendation: investigate a small number of Queens&#8211;Manhattan and airport-oriented scenarios, then test driver supply, charging, customer acquisition, regulation, and unit economics before committing fleet capacity.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+      <div style="background: #12141A; border: 1px solid #34C08B; border-radius: 12px; padding: 20px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #34C08B; margin: 0 0 8px 0;">PROCEED WITH</p><p style="font-size: 15px; margin: 0;">Corridor-level discovery</p></div>
+      <div style="background: #12141A; border: 1px solid #E45858; border-radius: 12px; padding: 20px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E45858; margin: 0 0 8px 0;">DO NOT CLAIM</p><p style="font-size: 15px; margin: 0;">Unmet demand or profitability</p></div>
+      <div style="background: #12141A; border: 1px solid #4B8DF8; border-radius: 12px; padding: 20px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4B8DF8; margin: 0 0 8px 0;">VALIDATE NEXT</p><p style="font-size: 15px; margin: 0;">Supply, charging, acquisition cost, regulation</p></div>
+    </div>
+  </section>
+
+  <section id="problem" data-screen-label="Context and Problem" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">02 / DATA SCOPE</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 26px 0; letter-spacing: -0.01em; max-width: 760px; text-wrap: balance;">Enough data to find patterns. Not enough data to skip judgment.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden;">
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #F5B02E;">843,752,700</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">raw trip rows &#183; 72 monthly Parquet files</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #4B8DF8;">839,068,674</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">valid completed trips after quality rules</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #F2712B;">263</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">active pickup zones in scope</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #EEF0F4;">36</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">months &#183; Jan 2023 to Dec 2025</p></div>
+    </div>
+    <p style="font-size: 15px; line-height: 1.7; color: #99A1AF; max-width: 720px; margin: 22px 0 32px 0;">Yellow Taxi (128.2M rows) and High Volume For-Hire Vehicle (715.6M rows) records combined with the TLC taxi-zone lookup — about 18.36 GB locally. Only aggregated dashboard contracts are published; trip-level records never enter Git.</p>
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">03 / DECISION CONTEXT</p>
+    <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 3vw, 30px); margin: 0 0 16px 0; max-width: 760px; text-wrap: balance;">Completed trips show activity. They do not show the whole market.</h3>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 12px 0;">A market-entry team needs more than a citywide trip count: competitive concentration, geographic density, time windows, fare position, and the evidence gaps that could change a fleet decision.</p>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0;">TLC data records completed trips. It does not capture rejected requests, unserved passengers, online drivers, idle vehicles, or charging availability. I treated that boundary as part of the analysis rather than a footnote.</p>
+  </section>
+
+  <section id="evidence" data-screen-label="Evidence" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">04 / MARKET STRUCTURE</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 18px 0; letter-spacing: -0.01em; max-width: 760px; text-wrap: balance;">A growing market does not mean accessible market share.</h2>
+    <div style="display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 28px; align-items: center; margin-bottom: 20px;">
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 14px; padding: 28px; text-align: center;">
+        <p style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(48px, 6vw, 72px); font-weight: 700; margin: 0; color: #F5B02E;">85.26%</p>
+        <p style="font-size: 14px; color: #99A1AF; margin: 6px 0 0 0;">of observed completed trips belong to Uber + Lyft</p>
+      </div>
+      <div style="display: grid; gap: 10px;">
+        <div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;"><span>Uber &#183; 522.1M trips &#183; $26.50 avg fare</span><span style="font-family: 'IBM Plex Mono', monospace; color: #F5B02E;">62.23%</span></div>
+          <div style="height: 10px; background: #1B1E27; border-radius: 5px;"><div style="width: 62.23%; height: 100%; background: #F5B02E; border-radius: 5px;"></div></div>
+        </div>
+        <div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;"><span>Lyft &#183; 193.3M trips &#183; $24.43 avg fare</span><span style="font-family: 'IBM Plex Mono', monospace; color: #F2712B;">23.04%</span></div>
+          <div style="height: 10px; background: #1B1E27; border-radius: 5px;"><div style="width: 23.04%; height: 100%; background: #F2712B; border-radius: 5px;"></div></div>
+        </div>
+        <div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;"><span>Yellow Taxi &#183; 123.7M trips &#183; $20.04 avg fare</span><span style="font-family: 'IBM Plex Mono', monospace; color: #4B8DF8;">14.74%</span></div>
+          <div style="height: 10px; background: #1B1E27; border-radius: 5px;"><div style="width: 14.74%; height: 100%; background: #4B8DF8; border-radius: 5px;"></div></div>
+        </div>
+        <p style="font-size: 13px; color: #6E7686; margin: 8px 0 0 0; line-height: 1.6;">Annual observed trips grew from 270.3M (2023) to 288.9M (2025); operator HHI stayed between 4,504 and 4,769 — persistent concentration.</p>
+      </div>
+    </div>
+    <div style="background: #12141A; border-left: 3px solid #F5B02E; border-radius: 0 10px 10px 0; padding: 16px 20px; max-width: 760px; margin-bottom: 44px;">
+      <p style="font-size: 14.5px; color: #C4CAD6; line-height: 1.65; margin: 0;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #F5B02E;">SO WHAT? </span>A new entrant cannot assume market growth translates into attainable share. Customer acquisition, driver liquidity, reliability, and differentiation need their own evidence.</p>
+    </div>
+
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">05 / GEOGRAPHIC SIGNALS</p>
+    <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 3vw, 30px); margin: 0 0 16px 0; max-width: 760px; text-wrap: balance;">The evidence points to corridors, not a citywide launch.</h3>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 22px 0;">Manhattan generated 45.95% of valid trip activity, Brooklyn 22.75%, Queens 19.33%. Density alone, however, does not make every Manhattan zone the best place to investigate first.</p>
+    <div style="border: 1px solid #23262F; border-radius: 12px; overflow: hidden; margin-bottom: 14px; overflow-x: auto;">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr 0.8fr; gap: 0; min-width: 720px; font-size: 13.5px;">
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0; padding: 12px 16px; background: #12141A;">ZONE (LATEST-YEAR SHORTLIST)</p>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0; padding: 12px 16px; background: #12141A;">BOROUGH</p>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0; padding: 12px 16px; background: #12141A;">TRIPS</p>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0; padding: 12px 16px; background: #12141A;">YOY</p>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0; padding: 12px 16px; background: #12141A;">AVG FARE</p>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0; padding: 12px 16px; background: #12141A;">SCORE</p>
+        <p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; font-weight: 600;">Long Island City / Hunters Point</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">Queens</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">2.20M</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #34C08B;">+9.03%</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">$24.05</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; font-family: 'IBM Plex Mono', monospace; color: #F5B02E;">80.88</p>
+        <p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; font-weight: 600;">LaGuardia Airport</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">Queens</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">6.16M</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #34C08B;">+2.49%</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">$56.85</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; font-family: 'IBM Plex Mono', monospace; color: #F5B02E;">77.90</p>
+        <p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; font-weight: 600;">Flushing</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">Queens</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">1.36M</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #34C08B;">+10.81%</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">$23.45</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; font-family: 'IBM Plex Mono', monospace; color: #F5B02E;">76.24</p>
+        <p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; font-weight: 600;">Greenpoint</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">Brooklyn</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">2.46M</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #34C08B;">+7.06%</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">$24.64</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; font-family: 'IBM Plex Mono', monospace; color: #F5B02E;">74.77</p>
+        <p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; font-weight: 600;">Financial District North</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">Manhattan</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">1.80M</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #34C08B;">+4.79%</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; color: #99A1AF;">$35.43</p><p style="margin: 0; padding: 12px 16px; border-top: 1px solid #23262F; font-family: 'IBM Plex Mono', monospace; color: #F5B02E;">73.65</p>
+      </div>
+    </div>
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6E7686; margin: 0 0 44px 0; line-height: 1.7;">Score = 35% activity percentile + 30% YoY growth percentile + 20% fare percentile + 15% airport relevance percentile. It organizes research priorities — it does not predict profit, unmet demand, or fleet size.</p>
+
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">06 / OPERATING PATTERNS</p>
+    <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 3vw, 30px); margin: 0 0 16px 0; max-width: 760px; text-wrap: balance;">Friday and Saturday evenings provide the clearest test window.</h3>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 22px 0;">The largest zone-hour aggregates recur between 18:00 and 23:00 on Friday and Saturday — supporting a controlled evening-shift experiment with defined geography and service level. It does not determine fleet size: vehicle requirements still depend on supply, turnaround, charging, deadhead miles and utilization targets.</p>
+    <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px; overflow-x: auto;">
+      <div style="min-width: 640px;">
+        <sc-for list="{{ heatRows }}" as="row" hint-placeholder-count="7">
+          <div style="display: grid; grid-template-columns: 46px repeat(24, 1fr); gap: 3px; margin-bottom: 3px; align-items: center;">
+            <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #99A1AF; margin: 0;">{{ row.day }}</p>
+            <sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="24">
+              <div style="{{ c.style }}" title="{{ c.label }}"></div>
+            </sc-for>
+          </div>
+        </sc-for>
+        <div style="display: grid; grid-template-columns: 46px repeat(24, 1fr); gap: 3px; margin-top: 6px;">
+          <span></span>
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6E7686; margin: 0; grid-column: 2 / 8;">00:00</p>
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6E7686; margin: 0; grid-column: 8 / 14;">06:00</p>
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6E7686; margin: 0; grid-column: 14 / 20;">12:00</p>
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6E7686; margin: 0; grid-column: 20 / 26;">18:00 &#8594; 23:00</p>
+        </div>
+      </div>
+      <p style="font-size: 13px; color: #6E7686; margin: 14px 0 0 0; line-height: 1.6;">Operating-window schematic (brighter = stronger recurring aggregates; amber = Fri/Sat 18:00&#8211;23:00 peak window). Exact values live in the dashboard's hourly-demand view.</p>
+    </div>
+  </section>
+
+  <section id="decision" data-screen-label="Recommendation" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">07 / RECOMMENDATION</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em; max-width: 760px; text-wrap: balance;">Move to the next evidence gate before moving vehicles.</h2>
+    <div style="background: linear-gradient(135deg, #16181F, #12141A); border: 1px solid #F5B02E; border-radius: 14px; padding: 28px; max-width: 820px; margin-bottom: 26px;">
+      <p style="font-size: 17px; line-height: 1.7; color: #EEF0F4; margin: 0;">Advance to a narrow validation stage. Compare a <strong style="color: #F5B02E;">Long Island City&#8211;Manhattan corridor</strong> with a <strong style="color: #F5B02E;">LaGuardia-oriented scenario</strong>. Define the operating window, service-level target, and decision thresholds before any pilot.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 26px;">
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 20px; color: #F5B02E; margin: 0 0 8px 0;">1</p><p style="font-size: 14px; color: #C4CAD6; line-height: 1.6; margin: 0;">Compare LIC&#8211;Manhattan and LaGuardia-oriented scenarios.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 20px; color: #F5B02E; margin: 0 0 8px 0;">2</p><p style="font-size: 14px; color: #C4CAD6; line-height: 1.6; margin: 0;">Acquire request, driver-supply, charging, regulation, and cost inputs.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 20px; color: #F5B02E; margin: 0 0 8px 0;">3</p><p style="font-size: 14px; color: #C4CAD6; line-height: 1.6; margin: 0;">Set utilization, service-level, and contribution-margin thresholds.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 20px; color: #F5B02E; margin: 0 0 8px 0;">4</p><p style="font-size: 14px; color: #C4CAD6; line-height: 1.6; margin: 0;">Run a time-bounded pilot only if those thresholds are credible.</p></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px;">
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-size: 13.5px; color: #EEF0F4; font-weight: 600; margin: 0 0 6px 0;">Queens activity &amp; growth &#8594; prioritize corridor discovery</p><p style="font-size: 12.5px; color: #6E7686; margin: 0;">Follow-up: customer and driver interviews</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-size: 13.5px; color: #EEF0F4; font-weight: 600; margin: 0 0 6px 0;">Airport relevance &amp; fares &#8594; test an airport proposition</p><p style="font-size: 12.5px; color: #6E7686; margin: 0;">Follow-up: permit, queue, toll, charging review</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-size: 13.5px; color: #EEF0F4; font-weight: 600; margin: 0 0 6px 0;">Evening concentration &#8594; define a limited operating window</p><p style="font-size: 12.5px; color: #6E7686; margin: 0;">Follow-up: supply and vehicle-cycle assumptions</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-size: 13.5px; color: #EEF0F4; font-weight: 600; margin: 0 0 6px 0;">High concentration &#8594; avoid undifferentiated entry</p><p style="font-size: 12.5px; color: #6E7686; margin: 0;">Follow-up: acquisition and retention economics</p></div>
+    </div>
+  </section>
+
+  <section id="build" data-screen-label="Build" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">08 / ANALYTICS ENGINEERING</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 18px 0; letter-spacing: -0.01em; max-width: 760px; text-wrap: balance;">The dashboard is the last mile of a tested data product.</h2>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 26px 0;">Business definitions live in dbt models and tests, not chart code. Python downloads the official monthly files with retry and resume. DuckDB reads and transforms local Parquet. dbt standardizes both trip services, builds a star schema and decision marts. Python exports six versioned JSON contracts for the static JavaScript dashboard.</p>
+    <div style="background: #0E1015; border: 1px solid #23262F; border-radius: 16px; padding: 24px; overflow-x: auto; margin-bottom: 22px;">
+      <div style="display: flex; align-items: stretch; gap: 8px; min-width: 980px;">
+        <div style="flex: 1; background: #12141A; border: 1px solid #4B8DF8; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">NYC TLC files</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">2023&#8211;2025 &#183; 72 months</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #F5B02E; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">Python ingestion</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">retry &#183; resume</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #F5B02E; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">DuckDB raw views</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">843.8M trips</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1.3; background: #14161E; border: 1px solid #F2712B; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #F2712B; margin: 0;">dbt: stg &#8594; int &#8594; star schema &#8594; marts</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">types &#183; quality rules &#183; conformed services &#183; decision marts</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #34C08B; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">6 JSON contracts</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">versioned &#183; aggregate-only</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #B268F0; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">JS dashboard</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">Chart.js &#183; GitHub Pages</p></div>
+      </div>
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #6E7686; margin: 16px 0 0 0; text-align: center; min-width: 980px;">pytest + dbt tests + Ruff gate every dbt layer &#183; GitHub Actions runs the gates and deploys the dashboard</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-bottom: 22px;">
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #F5B02E; margin: 0 0 8px 0;">DATA MODEL</p><p style="font-size: 13.5px; color: #C4CAD6; line-height: 1.7; margin: 0;">Dimensions: date, service, pickup zone &#183; Fact: one conformed completed-trip record &#183; Marts: market overview, fare positioning, hourly demand, concentration, zone opportunity</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #F2712B; margin: 0 0 8px 0;">KEY DECISIONS</p><p style="font-size: 13.5px; color: #C4CAD6; line-height: 1.7; margin: 0;">DuckDB over a cloud warehouse (local, reproducible, free) &#183; metric definitions upstream in dbt &#183; aggregate-only publishing &#183; opportunity score with exposed weights &#183; contracts versioned so the dashboard can never drift from tested marts</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4B8DF8; margin: 0 0 8px 0;">STACK</p><p style="font-size: 13.5px; color: #C4CAD6; line-height: 1.7; margin: 0;">Python 3.12+ &#183; DuckDB &#183; SQL &#183; dbt Core &#183; HTML/CSS/JS &#183; Chart.js &#183; pytest &#183; Ruff &#183; GitHub Actions</p></div>
+    </div>
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">09 / RELIABILITY</p>
+    <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 3vw, 30px); margin: 0 0 16px 0; max-width: 760px; text-wrap: balance;">Every headline number traces back to a tested mart.</h3>
+    <p style="font-size: 15px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 20px 0;">The full-data build passed 61 of 61 scale-appropriate dbt nodes — covering source types, accepted values, date boundaries, non-null keys, relationships, fact-to-conformed reconciliation, weighted-fare reconciliation, share totals, mart grain, and score bounds. CI adds deterministic fixture builds, pytest, Ruff, JS syntax and contract tests, and Pages validation. The JavaScript layer contains no manually entered KPI constants.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden;">
+      <div style="background: #12141A; padding: 18px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #34C08B; margin: 0;">61/61</p><p style="font-size: 12.5px; color: #99A1AF; margin: 3px 0 0 0;">full-data dbt nodes passed</p></div>
+      <div style="background: #12141A; padding: 18px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #F5B02E; margin: 0;">6</p><p style="font-size: 12.5px; color: #99A1AF; margin: 3px 0 0 0;">versioned JSON dashboard contracts</p></div>
+      <div style="background: #12141A; padding: 18px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #4B8DF8; margin: 0;">0</p><p style="font-size: 12.5px; color: #99A1AF; margin: 3px 0 0 0;">raw rows committed to Git</p></div>
+      <div style="background: #12141A; padding: 18px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: #EEF0F4; margin: 0;">CI/CD</p><p style="font-size: 12.5px; color: #99A1AF; margin: 3px 0 0 0;">GitHub Actions + GitHub Pages</p></div>
+    </div>
+  </section>
+
+  <section id="reflection" data-screen-label="Reflection" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">10 / WHAT THE DATA CANNOT ANSWER</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em; max-width: 760px; text-wrap: balance;">The missing data determines whether the opportunity is operable.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin-bottom: 18px;">
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-size: 14px; font-weight: 600; margin: 0 0 5px 0;">Requests, cancellations, ETA</p><p style="font-size: 13px; color: #6E7686; margin: 0;">&#8594; separate completed activity from unmet demand</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-size: 14px; font-weight: 600; margin: 0 0 5px 0;">Driver online &amp; idle time</p><p style="font-size: 13px; color: #6E7686; margin: 0;">&#8594; estimate supply coverage and utilization</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-size: 14px; font-weight: 600; margin: 0 0 5px 0;">Charging locations &amp; dwell time</p><p style="font-size: 13px; color: #6E7686; margin: 0;">&#8594; test EV feasibility by zone and shift</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-size: 14px; font-weight: 600; margin: 0 0 5px 0;">Weather, events, transit disruption</p><p style="font-size: 13px; color: #6E7686; margin: 0;">&#8594; explain short-term variation</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-size: 14px; font-weight: 600; margin: 0 0 5px 0;">Insurance, labor, acquisition, energy cost</p><p style="font-size: 13px; color: #6E7686; margin: 0;">&#8594; build contribution-margin scenarios</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 18px;"><p style="font-size: 14px; font-weight: 600; margin: 0 0 5px 0;">Customer research &amp; incentives</p><p style="font-size: 13px; color: #6E7686; margin: 0;">&#8594; test willingness to switch and acquisition cost</p></div>
+    </div>
+    <p style="font-size: 15px; color: #99A1AF; font-style: italic; margin: 0 0 44px 0;">Good analysis does not remove uncertainty. It makes the next uncertainty explicit and testable.</p>
+
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">11 / REFLECTION &#8212; WHAT I'D DO DIFFERENTLY</p>
+    <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 3vw, 30px); margin: 0 0 16px 0; max-width: 760px; text-wrap: balance;">What this project changed in my analytical practice.</h3>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 12px 0;">The hardest part was not processing 843.8 million rows. It was keeping the decision claim smaller than the dataset.</p>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0;">I learned to separate observed activity from demand, place metric definitions upstream of the dashboard, expose the assumptions behind a score, and connect every finding to a decision or a missing piece of evidence. The result is both an analytics engineering project and a data analysis case study: reliable enough to inspect, clear enough to question, and honest about what it cannot prove.</p>
+  </section>
+
+  <footer style="border-top: 1px solid #23262F; margin-top: 48px;">
+    <div style="max-width: 1140px; margin: 0 auto; padding: 64px 24px 48px 24px; text-align: center;">
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 4vw, 40px); margin: 0 0 24px 0;">Inspect the evidence or inspect the build.</h2>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://kina2711.github.io/green-sm-nyc-mobility-intelligence/" style="background: #F5B02E; color: #0B0C10; font-weight: 700; padding: 13px 26px; border-radius: 8px; font-size: 15px;" style-hover="background: #FFC95C; color: #0B0C10;">Explore live dashboard</a>
+        <a href="https://github.com/kina2711/green-sm-nyc-mobility-intelligence" style="border: 1px solid #363B47; color: #EEF0F4; padding: 13px 26px; border-radius: 8px; font-size: 15px; font-weight: 600;" style-hover="border-color: #F5B02E; color: #F5B02E;">View GitHub repository</a>
+        <a href="Portfolio Home.dc.html" style="border: 1px solid #363B47; color: #EEF0F4; padding: 13px 26px; border-radius: 8px; font-size: 15px; font-weight: 600;" style-hover="border-color: #F5B02E; color: #F5B02E;">&#8592; Back to selected work</a>
+      </div>
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6E7686; margin: 40px 0 0 0; line-height: 1.7;">Personal portfolio case study by Kien Thai. Code under MIT License.<br>Official NYC TLC trip-level data is not redistributed.</p>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    const heatRows = days.map((day, di) => ({
+      day,
+      cells: Array.from({ length: 24 }, (_, h) => {
+        let w = 0.12;
+        if (h >= 7 && h <= 9) w = 0.35;
+        if (h >= 12 && h <= 16) w = 0.3;
+        if (h >= 17) w = 0.45;
+        if (h >= 18 && h <= 23) w = 0.55;
+        if (di >= 4 && di <= 5 && h >= 18 && h <= 23) w = 1;
+        if (di === 6 && h <= 2) w = 0.5;
+        const peak = di >= 4 && di <= 5 && h >= 18 && h <= 23;
+        return {
+          label: day + ' ' + String(h).padStart(2, '0') + ':00',
+          style: {
+            height: '18px', borderRadius: '3px',
+            background: peak ? 'rgba(245,176,46,' + w + ')' : 'rgba(75,141,248,' + (0.08 + w * 0.5) + ')',
+            border: peak ? '1px solid rgba(245,176,46,0.7)' : '1px solid transparent',
+          },
+        };
+      }),
+    }));
+    return { heatRows };
+  }
+}
+</script>
+</body>
+</html>

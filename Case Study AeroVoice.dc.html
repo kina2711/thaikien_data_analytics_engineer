@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0B0C10; }
+  a { color: #F5B02E; text-decoration: none; }
+  a:hover { color: #FFC95C; }
+  ::selection { background: #F5B02E; color: #0B0C10; }
+</style>
+</helmet>
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #EEF0F4; background: #0B0C10; min-height: 100vh;">
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 24px; background: rgba(11,12,16,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #23262F;">
+    <a href="Portfolio Home.dc.html" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #EEF0F4;">&#8592; kien<span style="color: #F5B02E;">.</span>thai</a>
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6E7686; margin: 0;">CS-01 &#183; AEROVOICE</p>
+  </nav>
+
+  <header data-screen-label="Hero" style="max-width: 1140px; margin: 0 auto; padding: 88px 24px 56px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 18px 0; letter-spacing: 0.12em;">ANALYTICS ENGINEERING / AVIATION CUSTOMER EXPERIENCE</p>
+    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(38px, 6vw, 68px); line-height: 1.05; letter-spacing: -0.02em; margin: 0; font-weight: 700;">214,681 reviews.<br><span style="color: #F5B02E;">Governed metrics stakeholders can trust.</span></h1>
+    <p style="font-size: 18px; line-height: 1.7; color: #99A1AF; max-width: 680px; margin: 24px 0 0 0; text-wrap: pretty;">AeroVoice turns public aviation reviews — airlines, airports, lounges, seats — into an audited dimensional warehouse with NLP enrichment and a privacy-safe public dashboard, built to answer real stakeholder questions with numbers that can be traced back to tests.</p>
+    <div style="display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap;">
+      <a href="https://kina2711.github.io/aerovoice-intelligence-platform/" style="background: #F5B02E; color: #0B0C10; font-weight: 700; padding: 13px 24px; border-radius: 8px; font-size: 15px;" style-hover="background: #FFC95C; color: #0B0C10;">Explore live dashboard &#8599;</a>
+      <a href="https://github.com/kina2711/aerovoice-intelligence-platform" style="border: 1px solid #363B47; color: #EEF0F4; padding: 13px 24px; border-radius: 8px; font-size: 15px; font-weight: 600;" style-hover="border-color: #F5B02E; color: #F5B02E;">View source code</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden; margin-top: 44px;">
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">ROLE</p><p style="font-size: 14px; margin: 0;">Analytics Engineer</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">SCOPE</p><p style="font-size: 14px; margin: 0;">Individual project &#183; Jul 2026</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">DATA</p><p style="font-size: 14px; margin: 0;">214,681 aviation reviews &#183; 4 review types</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">STACK</p><p style="font-size: 14px; margin: 0;">SQL Server &#183; dbt Core &#183; Airflow &#183; Python NLP &#183; ECharts</p></div>
+    </div>
+    <a href="https://kina2711.github.io/aerovoice-intelligence-platform/" style="display: block; margin-top: 36px; border: 1px solid #23262F; border-radius: 14px; overflow: hidden;" style-hover="border-color: #F5B02E;">
+      <img src="assets/aerovoice-overview.png" alt="AeroVoice live dashboard overview" style="width: 100%; display: block;">
+    </a>
+  </header>
+
+  <section data-screen-label="Context and Problem" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">01 / CONTEXT &amp; PROBLEM</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 18px 0; letter-spacing: -0.01em; max-width: 760px; text-wrap: balance;">Review data is messy, mixed-grain, and easy to misuse.</h2>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 12px 0;">Public aviation reviews mix four different things — airline flights, airport experiences, lounges, and seats — each with its own rating structure, categorical quirks, and sample-size traps. Naively averaging them produces confident-looking numbers that mislead: a "top airline" ranking built on 12 reviews, or sentiment scores leaking personally identifiable review text.</p>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0;">The goal: a warehouse where each review type keeps its own grain, metrics are defined once with guardrails, and the public dashboard only ever exposes privacy-safe aggregates — then prove it works by answering 15 concrete stakeholder requests.</p>
+  </section>
+
+  <section data-screen-label="Architecture" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">02 / ARCHITECTURE</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em; max-width: 760px; text-wrap: balance;">Four grains, one governed pipeline.</h2>
+    <div style="background: #0E1015; border: 1px solid #23262F; border-radius: 16px; padding: 24px; overflow-x: auto;">
+      <div style="display: flex; align-items: stretch; gap: 8px; min-width: 980px;">
+        <div style="flex: 1; background: #12141A; border: 1px solid #4B8DF8; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">Raw review data</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">airline &#183; airport &#183; lounge &#183; seat</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #F5B02E; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">Python ingestion + NLP</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">local sentiment &#183; topic signals &#183; no external APIs</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1.4; background: #14161E; border: 1px solid #F2712B; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #F2712B; margin: 0;">dbt on SQL Server: stg &#8594; atomic facts &#8594; semantic marts</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">39 models &#183; conformed dimensions &#183; 4 review grains kept separate</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #34C08B; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">Quality gates</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">95 dbt tests &#183; 25 Python contract/unit tests &#183; CI</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #B268F0; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">ECharts dashboard</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">privacy-safe aggregates &#183; GitHub Pages</p></div>
+      </div>
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #6E7686; margin: 16px 0 0 0; text-align: center; min-width: 980px;">Airflow provides an audited refresh entrypoint &#183; GitHub Actions runs quality gates on every change</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Key Decisions" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">03 / KEY DECISIONS</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em;">What I chose, and why</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px;">
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Four separate review grains, not one merged table</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">Airline, airport, lounge and seat reviews measure different experiences. Keeping atomic facts per grain with conformed dimensions prevents cross-grain averages that look right and mean nothing.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Sample-size guardrails inside metric definitions</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">Recommendation rate and low-rating rate only surface when an entity clears a minimum review count — defined in the semantic marts, so no downstream chart can rank an airline on a handful of reviews.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Local NLP, zero external calls</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">Sentiment and topic enrichment run locally in Python — reproducible, free, and no review text ever leaves the machine. The public layer publishes aggregates only.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Stakeholder requests as the acceptance test</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">15 concrete questions (rankings, drivers of dissatisfaction, coverage) defined the marts — the warehouse was done when every request could be answered from tested models, not when the schema looked elegant.</p></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Results" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">04 / RESULTS</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em;">Measured outcomes</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden;">
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #F5B02E;">39</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">dbt models across staging, facts and semantic marts</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #34C08B;">95 + 25</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">dbt data tests + Python contract/unit tests in CI</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #4B8DF8;">15/15</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">stakeholder requests answered from governed marts</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #EEF0F4;">0</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">raw review texts exposed on the public dashboard</p></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Reflection" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">05 / WHAT I'D DO DIFFERENTLY</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 18px 0; letter-spacing: -0.01em; max-width: 760px;">Define the semantic layer before the first model.</h2>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 12px 0;">I wrote several staging models before locking metric definitions, and reworked them once guardrails changed what the marts needed. Next time: agree the governed metrics and their minimum-sample rules first, then let them dictate the model DAG.</p>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0;">I'd also add incremental loading — the full-refresh pattern is fine at 214K reviews but wouldn't survive a continuously growing source.</p>
+  </section>
+
+  <footer style="border-top: 1px solid #23262F; margin-top: 48px;">
+    <div style="max-width: 1140px; margin: 0 auto; padding: 64px 24px 48px 24px; text-align: center;">
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://kina2711.github.io/aerovoice-intelligence-platform/" style="background: #F5B02E; color: #0B0C10; font-weight: 700; padding: 13px 26px; border-radius: 8px; font-size: 15px;" style-hover="background: #FFC95C; color: #0B0C10;">Explore live dashboard</a>
+        <a href="Portfolio Home.dc.html" style="border: 1px solid #363B47; color: #EEF0F4; padding: 13px 26px; border-radius: 8px; font-size: 15px; font-weight: 600;" style-hover="border-color: #F5B02E; color: #F5B02E;">&#8592; Back to selected work</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>

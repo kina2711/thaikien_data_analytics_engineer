@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0B0C10; }
+  a { color: #F2712B; text-decoration: none; }
+  a:hover { color: #FF9B5C; }
+  ::selection { background: #F2712B; color: #0B0C10; }
+</style>
+</helmet>
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #EEF0F4; background: #0B0C10; min-height: 100vh;">
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 24px; background: rgba(11,12,16,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #23262F;">
+    <a href="Portfolio Home.dc.html" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #EEF0F4;">&#8592; kien<span style="color: #F2712B;">.</span>thai</a>
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6E7686; margin: 0;">CS-03 &#183; VELOCISYNC M2MR</p>
+  </nav>
+
+  <header data-screen-label="Hero" style="max-width: 1140px; margin: 0 auto; padding: 88px 24px 56px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F2712B; margin: 0 0 18px 0; letter-spacing: 0.12em;">DATA ENGINEERING / BATCH + CDC PIPELINE</p>
+    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(38px, 6vw, 68px); line-height: 1.05; letter-spacing: -0.02em; margin: 0; font-weight: 700;">Replay anything.<br><span style="color: #F2712B;">Lose nothing. Duplicate nothing.</span></h1>
+    <p style="font-size: 18px; line-height: 1.7; color: #99A1AF; max-width: 680px; margin: 24px 0 0 0; text-wrap: pretty;">VeloCiSync M2MR is a dual-path pipeline where Spark replays historical GitHub-event backfills through MySQL staging while Debezium and Kafka stream canonical database changes into MongoDB and Redis — engineered so that re-running any step never corrupts the result.</p>
+    <div style="display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap;">
+      <a href="https://github.com/kina2711/velocisync-m2mr-etl" style="background: #F2712B; color: #0B0C10; font-weight: 700; padding: 13px 24px; border-radius: 8px; font-size: 15px;" style-hover="background: #FF9B5C; color: #0B0C10;">View source code &#8599;</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden; margin-top: 44px;">
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">ROLE</p><p style="font-size: 14px; margin: 0;">Data Engineer</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">SCOPE</p><p style="font-size: 14px; margin: 0;">Individual project &#183; Jul 2026</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">DATA</p><p style="font-size: 14px; margin: 0;">438,018 GitHub events &#183; 24 hourly partitions</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">STACK</p><p style="font-size: 14px; margin: 0;">Python &#183; Spark &#183; MySQL &#183; Debezium &#183; Kafka &#183; MongoDB &#183; Redis &#183; Docker</p></div>
+    </div>
+  </header>
+
+  <section data-screen-label="Context and Problem" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F2712B; margin: 0 0 10px 0;">01 / CONTEXT &amp; PROBLEM</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 18px 0; letter-spacing: -0.01em; max-width: 760px; text-wrap: balance;">Backfills and live sync fail in opposite ways.</h2>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 12px 0;">Historical backfills get re-run — after a crash, a bug fix, a partial load — and naive re-runs create duplicates. Live CDC has the opposite failure: if the consumer commits its Kafka offset before a downstream write lands, a crash silently loses events. Most tutorial pipelines handle neither.</p>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0;">The goal: one system where MySQL is the single canonical store, historical JSONL replays are provably idempotent, and CDC projections into MongoDB and Redis are exactly-once in effect — with the audit trail to prove it.</p>
+  </section>
+
+  <section data-screen-label="Architecture" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F2712B; margin: 0 0 10px 0;">02 / ARCHITECTURE</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em;">Two paths, one canonical truth</h2>
+    <div style="background: #0E1015; border: 1px solid #23262F; border-radius: 16px; padding: 24px; overflow-x: auto;">
+      <div style="min-width: 940px;">
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; letter-spacing: 0.18em; margin: 0 0 10px 0;">PATH A &#183; HISTORICAL BACKFILL (solid)</p>
+        <div style="display: flex; align-items: stretch; gap: 8px; margin-bottom: 22px;">
+          <div style="flex: 1; background: #12141A; border: 1px solid #4B8DF8; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">GitHub events JSONL</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">438,018 events &#183; 24 hourly partitions</p></div>
+          <p style="align-self: center; color: #F2712B; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+          <div style="flex: 1; background: #12141A; border: 1px solid #F5B02E; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">Spark processing</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">contract validation &#183; rejected-record quarantine</p></div>
+          <p style="align-self: center; color: #F2712B; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+          <div style="flex: 1; background: #12141A; border: 1px solid #F5B02E; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">MySQL staging</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">SHA-256 fingerprints &#183; idempotent merges &#183; dedup</p></div>
+          <p style="align-self: center; color: #F2712B; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+          <div style="flex: 1; background: #14161E; border: 1px solid #F2712B; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #F2712B; margin: 0;">MySQL canonical</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">immutable event IDs &#183; audit accounting</p></div>
+        </div>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; letter-spacing: 0.18em; margin: 0 0 10px 0;">PATH B &#183; NEAR-REAL-TIME CDC (dashed)</p>
+        <div style="display: flex; align-items: stretch; gap: 8px;">
+          <div style="flex: 1; background: #14161E; border: 1px solid #F2712B; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #F2712B; margin: 0;">MySQL binlog</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">canonical changes</p></div>
+          <p style="align-self: center; color: #F2712B; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+          <div style="flex: 1; background: #12141A; border: 1px dashed #F5B02E; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">Debezium &#8594; Kafka</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">change topics</p></div>
+          <p style="align-self: center; color: #F2712B; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+          <div style="flex: 1.2; background: #12141A; border: 1px dashed #F5B02E; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">Checkpoint-safe consumer</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">offset commits ONLY after both targets succeed</p></div>
+          <p style="align-self: center; color: #F2712B; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+          <div style="flex: 1; background: #12141A; border: 1px solid #B268F0; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">MongoDB + Redis</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">document &amp; low-latency projections</p></div>
+        </div>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #6E7686; margin: 18px 0 0 0; text-align: center;">Entire stack containerized with Docker Compose &#183; Makefile automation &#183; CI validation &#183; operational runbooks &#183; 14 unit/integration tests</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Key Decisions" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F2712B; margin: 0 0 10px 0;">03 / KEY DECISIONS</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em;">What I chose, and why</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px;">
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Idempotency by construction, not by cleanup</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">Immutable event IDs + SHA-256 payload fingerprints + staged merges mean any partition can be replayed at any time — duplicates are detected and conflicts protected at write time, never repaired afterwards.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Offsets advance only after BOTH projections land</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">The CDC consumer treats MongoDB and Redis as one atomic outcome: a crash between writes replays the record instead of losing it. At-least-once delivery + idempotent writes = exactly-once effect.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">MySQL as the single canonical store</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">MongoDB and Redis are disposable projections, rebuildable from MySQL at any time. That one rule collapses the hardest distributed-systems questions into "replay the log".</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Audit accounting as a first-class output</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">Every batch reports accepted / rejected / duplicate counts that must reconcile to input totals — the same discipline as financial bookkeeping, applied to events.</p></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Results" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F2712B; margin: 0 0 10px 0;">04 / RESULTS</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em;">Measured outcomes</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden;">
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #F2712B;">438,018</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">events profiled &amp; processed across 24 partitions</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #F5B02E;">17,786</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">event backfill validated end to end</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #4B8DF8;">46.33/s</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">CDC throughput on a 1,000-record local batch test</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #34C08B;">14</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">unit/integration tests + CI + runbooks + Makefile</p></div>
+    </div>
+    <p style="font-size: 15px; line-height: 1.7; color: #99A1AF; max-width: 720px; margin: 20px 0 0 0;">An analytics notebook on top covers activity volume, actor/repository concentration, hourly patterns, and KPI quality gates with dashboard-ready outputs.</p>
+  </section>
+
+  <section data-screen-label="Reflection" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F2712B; margin: 0 0 10px 0;">05 / WHAT I'D DO DIFFERENTLY</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 18px 0; letter-spacing: -0.01em; max-width: 760px;">Measure throughput under contention, not just correctness.</h2>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 12px 0;">The 46.33 rec/s figure comes from a single-consumer local batch test. The next iteration gets consumer-group parallelism with per-partition ordering guarantees, plus load tests that measure how the checkpoint-safe pattern behaves when one target (Redis vs MongoDB) is degraded.</p>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0;">I'd also promote the audit accounting into queryable tables with alerting, so reconciliation failures page someone instead of living in logs.</p>
+  </section>
+
+  <footer style="border-top: 1px solid #23262F; margin-top: 48px;">
+    <div style="max-width: 1140px; margin: 0 auto; padding: 64px 24px 48px 24px; text-align: center;">
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://github.com/kina2711/velocisync-m2mr-etl" style="background: #F2712B; color: #0B0C10; font-weight: 700; padding: 13px 26px; border-radius: 8px; font-size: 15px;" style-hover="background: #FF9B5C; color: #0B0C10;">View GitHub repository</a>
+        <a href="Portfolio Home.dc.html" style="border: 1px solid #363B47; color: #EEF0F4; padding: 13px 26px; border-radius: 8px; font-size: 15px; font-weight: 600;" style-hover="border-color: #F2712B; color: #F2712B;">&#8592; Back to selected work</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>

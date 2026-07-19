@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0B0C10; }
+  a { color: #F5B02E; text-decoration: none; }
+  a:hover { color: #FFC95C; }
+  ::selection { background: #F5B02E; color: #0B0C10; }
+</style>
+</helmet>
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #EEF0F4; background: #0B0C10; min-height: 100vh;">
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 24px; background: rgba(11,12,16,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #23262F;">
+    <a href="Portfolio Home.dc.html" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #EEF0F4;">&#8592; kien<span style="color: #F5B02E;">.</span>thai</a>
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6E7686; margin: 0;">CS-06 &#183; GOLD PRICE PLATFORM</p>
+  </nav>
+
+  <header data-screen-label="Hero" style="max-width: 1140px; margin: 0 auto; padding: 88px 24px 56px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 18px 0; letter-spacing: 0.12em;">ANALYTICS ENGINEERING / SERVERLESS ELT</p>
+    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(38px, 6vw, 68px); line-height: 1.05; letter-spacing: -0.02em; margin: 0; font-weight: 700;">Daily market intelligence.<br><span style="color: #F5B02E;">Zero servers to babysit.</span></h1>
+    <p style="font-size: 18px; line-height: 1.7; color: #99A1AF; max-width: 680px; margin: 24px 0 0 0; text-wrap: pretty;">A Medallion ELT pipeline that ingests Vietnam gold prices daily on GitHub Actions, models Bronze&#8211;Silver&#8211;Gold layers with dbt on BigQuery, and publishes trends, brand spreads and day-over-day volatility to a self-updating README dashboard — with Discord alerts when things move.</p>
+    <div style="display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap;">
+      <a href="https://github.com/kina2711/gold-price-platform" style="background: #F5B02E; color: #0B0C10; font-weight: 700; padding: 13px 24px; border-radius: 8px; font-size: 15px;" style-hover="background: #FFC95C; color: #0B0C10;">View source code &#8599;</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden; margin-top: 44px;">
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">ROLE</p><p style="font-size: 14px; margin: 0;">Analytics Engineer</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">SCOPE</p><p style="font-size: 14px; margin: 0;">Individual project</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">DATA</p><p style="font-size: 14px; margin: 0;">VN gold prices &#183; 8 brands tracked daily</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">STACK</p><p style="font-size: 14px; margin: 0;">Python &#183; GitHub Actions &#183; dbt &#183; GCS + BigQuery &#183; Discord</p></div>
+    </div>
+  </header>
+
+  <section data-screen-label="Context and Problem" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">01 / CONTEXT &amp; PROBLEM</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 18px 0; letter-spacing: -0.01em; max-width: 760px; text-wrap: balance;">Prices are published daily. History and comparison are not.</h2>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0;">Vietnamese gold prices vary by brand, and the questions people actually ask — how has the spread between brands moved, how volatile was this week, is today's jump unusual — need accumulated history and modeled comparisons. The constraint I set: the whole loop must run unattended and cost nothing, using GitHub Actions as both the scheduler and the compute.</p>
+  </section>
+
+  <section data-screen-label="Architecture" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">02 / ARCHITECTURE</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em;">Medallion layers on a cron budget</h2>
+    <div style="background: #0E1015; border: 1px solid #23262F; border-radius: 16px; padding: 24px; overflow-x: auto;">
+      <div style="display: flex; align-items: stretch; gap: 8px; min-width: 940px;">
+        <div style="flex: 1; background: #12141A; border: 1px solid #4B8DF8; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">Price sources</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">8 VN gold brands</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #F5B02E; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">Python ingestion</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">daily GitHub Actions schedule</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #34C08B; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">Bronze on GCS</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">raw immutable snapshots</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1.2; background: #14161E; border: 1px solid #F2712B; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #F2712B; margin: 0;">dbt on BigQuery: Silver &#8594; Gold</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">cleaned history &#8594; trends &#183; spreads &#183; volatility</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #B268F0; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">README dashboard + Discord</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">self-updating charts &#183; movement alerts</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Key Decisions and Results" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">03 / KEY DECISIONS &amp; RESULTS</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em;">Constraints as design fuel</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin-bottom: 22px;">
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">GitHub Actions as the entire runtime</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">No VM, no orchestrator to patch: the scheduler, compute and deployment are one workflow file. The trade-off — no long-running processes — fits a once-daily batch perfectly.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">README as the dashboard surface</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">The repo page is where visitors already land, so the pipeline regenerates its charts there on every run — the project demos itself with zero hosting.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Immutable Bronze snapshots</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">Every day's raw payload lands untouched in GCS before any transformation — modeling bugs are re-runs against preserved history, never data loss.</p></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden;">
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #F5B02E;">100%</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">unattended daily loop: ingest &#8594; model &#8594; publish &#8594; alert</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #4B8DF8;">8</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">gold brands tracked with spread &amp; volatility comparisons</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #34C08B;">$0</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">infrastructure cost — free tiers end to end</p></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Reflection" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">04 / WHAT I'D DO DIFFERENTLY</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 18px 0; letter-spacing: -0.01em; max-width: 760px;">Harden the source boundary.</h2>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0;">Public price pages change without notice; the pipeline should detect schema drift and alert on missing brands rather than silently thinning the history. Source freshness tests and a dead-letter path for malformed snapshots are the next additions.</p>
+  </section>
+
+  <footer style="border-top: 1px solid #23262F; margin-top: 48px;">
+    <div style="max-width: 1140px; margin: 0 auto; padding: 64px 24px 48px 24px; text-align: center;">
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://github.com/kina2711/gold-price-platform" style="background: #F5B02E; color: #0B0C10; font-weight: 700; padding: 13px 26px; border-radius: 8px; font-size: 15px;" style-hover="background: #FFC95C; color: #0B0C10;">View GitHub repository</a>
+        <a href="Portfolio Home.dc.html" style="border: 1px solid #363B47; color: #EEF0F4; padding: 13px 26px; border-radius: 8px; font-size: 15px; font-weight: 600;" style-hover="border-color: #F5B02E; color: #F5B02E;">&#8592; Back to selected work</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>

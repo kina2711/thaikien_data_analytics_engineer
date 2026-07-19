@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0B0C10; }
+  a { color: #F5B02E; text-decoration: none; }
+  a:hover { color: #FFC95C; }
+  ::selection { background: #F5B02E; color: #0B0C10; }
+</style>
+</helmet>
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #EEF0F4; background: #0B0C10; min-height: 100vh;">
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 24px; background: rgba(11,12,16,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #23262F;">
+    <a href="Portfolio Home.dc.html" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #EEF0F4;">&#8592; kien<span style="color: #F5B02E;">.</span>thai</a>
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6E7686; margin: 0;">CS-04 &#183; POLARIS</p>
+  </nav>
+
+  <header data-screen-label="Hero" style="max-width: 1140px; margin: 0 auto; padding: 88px 24px 56px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 18px 0; letter-spacing: 0.12em;">DATA ENGINEERING + AI / END-TO-END PLATFORM</p>
+    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(38px, 6vw, 68px); line-height: 1.05; letter-spacing: -0.02em; margin: 0; font-weight: 700;">The job market, unified.<br><span style="color: #F5B02E;">Matched by meaning, not keywords.</span></h1>
+    <p style="font-size: 18px; line-height: 1.7; color: #99A1AF; max-width: 680px; margin: 24px 0 0 0; text-wrap: pretty;">Polaris collects Data &amp; AI job postings from three Vietnamese recruitment sources, transforms raw web pages into a traceable PostgreSQL model, and ranks CV-to-job fit with vector embeddings — served through a Next.js portal with market dashboards and scheduled alerts.</p>
+    <div style="display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap;">
+      <a href="https://github.com/kina2711/polaris-data-jobs-platform" style="background: #F5B02E; color: #0B0C10; font-weight: 700; padding: 13px 24px; border-radius: 8px; font-size: 15px;" style-hover="background: #FFC95C; color: #0B0C10;">View source code &#8599;</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden; margin-top: 44px;">
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">ROLE</p><p style="font-size: 14px; margin: 0;">Data + Full-stack Engineer</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">SCOPE</p><p style="font-size: 14px; margin: 0;">Individual project &#183; Jul 2026</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">SOURCES</p><p style="font-size: 14px; margin: 0;">TopCV &#183; LinkedIn &#183; ITViec</p></div>
+      <div style="background: #12141A; padding: 16px 18px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6E7686; margin: 0 0 4px 0;">STACK</p><p style="font-size: 14px; margin: 0;">Python &#183; Dagster &#183; dbt &#183; PostgreSQL + pgvector &#183; Next.js &#183; MinIO &#183; Redis</p></div>
+    </div>
+    <div style="margin-top: 36px; border: 1px solid #23262F; border-radius: 14px; overflow: hidden;">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="polaris-cs-hero" shape="rect" placeholder="Drop Polaris portal / Metabase screenshot here" src="assets/polaris-preview.png" hint-size="100%,420px" style="width: 100%; height: 420px; display: block;"></x-import>
+    </div>
+  </header>
+
+  <section data-screen-label="Context and Problem" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">01 / CONTEXT &amp; PROBLEM</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 18px 0; letter-spacing: -0.01em; max-width: 760px; text-wrap: balance;">Three sources, three formats, and keyword search that misses the point.</h2>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 12px 0;">Vietnam's data-job market is scattered across boards with incompatible structures, duplicate postings, and no way to ask the question that matters: <em>"which of these jobs actually fits my CV?"</em> Keyword matching rewards buzzword overlap, not real fit.</p>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0;">The goal: one traceable data model where every normalized record can be traced back to its preserved raw HTML, plus semantic matching that ranks jobs by meaning — wrapped in a portal a job-seeker would actually use.</p>
+  </section>
+
+  <section data-screen-label="Architecture" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">02 / ARCHITECTURE</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em;">Raw HTML to ranked match</h2>
+    <div style="background: #0E1015; border: 1px solid #23262F; border-radius: 16px; padding: 24px; overflow-x: auto;">
+      <div style="display: flex; align-items: stretch; gap: 8px; min-width: 1000px;">
+        <div style="flex: 1; background: #12141A; border: 1px solid #4B8DF8; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">3 job boards</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">daily crawls via GitHub Actions</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #34C08B; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">MinIO raw layer</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">original HTML preserved &#183; full traceability</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #F5B02E; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">BeautifulSoup parsers</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">source-specific fields &#183; transactional upserts</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1.3; background: #14161E; border: 1px solid #F2712B; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #F2712B; margin: 0;">PostgreSQL + dbt + pgvector</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">staging &amp; analytical models &#183; 384-dim MiniLM embeddings &#183; cosine similarity</p></div>
+        <p style="align-self: center; color: #F5B02E; margin: 0; font-family: 'IBM Plex Mono', monospace;">&#8594;</p>
+        <div style="flex: 1; background: #12141A; border: 1px solid #B268F0; border-radius: 10px; padding: 12px;"><p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #EEF0F4; margin: 0;">Next.js portal</p><p style="font-size: 11px; color: #6E7686; margin: 3px 0 0 0;">AI matching &#183; dashboards &#183; hourly alerts</p></div>
+      </div>
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #6E7686; margin: 16px 0 0 0; text-align: center; min-width: 1000px;">Dagster orchestrates &#183; Redis distributed locks prevent duplicate runs &#183; 9-container Docker Compose stack incl. Cube, Cube Store, Metabase</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Key Decisions" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">03 / KEY DECISIONS</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em;">What I chose, and why</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px;">
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Preserve raw HTML before parsing anything</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">Job boards change their markup constantly. Keeping the original page in MinIO means a parser bug is a re-run, not data loss — and every normalized field stays auditable back to its source.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">pgvector inside PostgreSQL, not a separate vector DB</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">Embeddings live next to the relational model, so semantic ranking joins directly with structured filters (location, level, salary) in one SQL query — no sync problem between two stores.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Redis distributed locks around scheduled jobs</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">Daily crawls and hourly alert deliveries are guarded by locks and authenticated internal APIs — overlapping runs can't double-send emails or double-insert postings.</p></div>
+      <div style="background: #12141A; border: 1px solid #23262F; border-radius: 12px; padding: 20px;"><p style="font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Quality gates across both languages</p><p style="font-size: 13.5px; color: #99A1AF; line-height: 1.65; margin: 0;">21 automated tests cover TypeScript and Python: linting, formatting, dbt parsing, Prisma validation, and Dagster definitions — the polyglot stack fails fast in CI, not in production.</p></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Results" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">04 / RESULTS</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 22px 0; letter-spacing: -0.01em;">Measured outcomes</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; background: #23262F; border: 1px solid #23262F; border-radius: 12px; overflow: hidden;">
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #F5B02E;">3 &#8594; 1</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">recruitment sources unified into a single traceable PostgreSQL model</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #4B8DF8;">384-dim</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">semantic ranking with MiniLM embeddings instead of keyword matching</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #F2712B;">9</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">containers operated healthy: DB, cache, orchestration, analytics, web</p></div>
+      <div style="background: #12141A; padding: 22px 20px;"><p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin: 0; color: #34C08B;">21</p><p style="font-size: 13px; color: #99A1AF; margin: 4px 0 0 0;">automated tests &amp; quality gates across TS, Python, dbt, Prisma, Dagster</p></div>
+    </div>
+    <p style="font-size: 15px; line-height: 1.7; color: #99A1AF; max-width: 720px; margin: 20px 0 0 0;">A recorded dataset of 234 postings visualized by location, experience level, hiring trend, and company demand — with daily crawling and hourly SMTP-tracked alert delivery running unattended.</p>
+  </section>
+
+  <section data-screen-label="Reflection" style="max-width: 1140px; margin: 0 auto; padding: 48px 24px;">
+    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #F5B02E; margin: 0 0 10px 0;">05 / WHAT I'D DO DIFFERENTLY</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 18px 0; letter-spacing: -0.01em; max-width: 760px;">Evaluate the matching, not just build it.</h2>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0 0 12px 0;">Semantic ranking works, but "works" needs a benchmark: a labeled set of CV-job pairs to measure precision against keyword baselines, and A/B evidence that embedding similarity predicts real fit. That evaluation harness comes before any model upgrade.</p>
+    <p style="font-size: 16px; line-height: 1.75; color: #99A1AF; max-width: 720px; margin: 0;">I'd also grow the dataset — 234 recorded postings proves the pipeline; market-level claims need months of accumulation, which the daily automation is designed to deliver.</p>
+  </section>
+
+  <footer style="border-top: 1px solid #23262F; margin-top: 48px;">
+    <div style="max-width: 1140px; margin: 0 auto; padding: 64px 24px 48px 24px; text-align: center;">
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://github.com/kina2711/polaris-data-jobs-platform" style="background: #F5B02E; color: #0B0C10; font-weight: 700; padding: 13px 26px; border-radius: 8px; font-size: 15px;" style-hover="background: #FFC95C; color: #0B0C10;">View GitHub repository</a>
+        <a href="Portfolio Home.dc.html" style="border: 1px solid #363B47; color: #EEF0F4; padding: 13px 26px; border-radius: 8px; font-size: 15px; font-weight: 600;" style-hover="border-color: #F5B02E; color: #F5B02E;">&#8592; Back to selected work</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>
